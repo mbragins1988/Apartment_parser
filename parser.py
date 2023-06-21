@@ -21,7 +21,7 @@ input_where_flat.send_keys(Keys.ENTER)
 
 
 def data():
-    for number_page in range(number_pages):
+    for _ in range(number_pages):
         soup = BeautifulSoup(browser.page_source, 'lxml')
         flats = soup.findAll('div', class_='iva-item-root-_lk9K photo-slider-slider-S15A_ iva-item-list-rfgcH iva-item-redesign-rop6P iva-item-responsive-_lbhG items-item-My3ih items-listItem-Gd1jN js-catalog-item-enum')
 
