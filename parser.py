@@ -9,7 +9,7 @@ where_flat = str(input())
 
 browser = Chrome()
 
-number_pages = 101
+number_pages = 10
 
 url = 'https://www.avito.ru/sochi?q=купить'
 
@@ -27,7 +27,7 @@ def data():
 
         for flat in flats:
             name = flat.find('h3', class_='styles-module-root-TWVKW styles-module-root-_KFFt styles-module-size_l-_oGDF styles-module-size_l-hruVE styles-module-ellipsis-LKWy3 styles-module-weight_bold-Kpd5F stylesMarningNormal-module-root-OSCNq stylesMarningNormal-module-header-l-qvNIS').text.strip()
-            location = flat.find('p', class_='styles-module-root-_KFFt styles-module-size_s-awPvv styles-module-size_s-_P6ZA styles-module-ellipsis-LKWy3 styles-module-ellipsis_oneLine-NY089 stylesMarningNormal-module-root-OSCNq stylesMarningNormal-module-paragraph-s-_c6vD styles-module-root_top-HYzCt styles-module-margin-top_0-_usAN').text.strip()
+            location = flat.find('p', class_='styles-module-size_s-awPvv').text.strip()
             price = flat.find('strong', class_='styles-module-root-LIAav').text.strip()
             link = 'https://www.avito.ru' + flat.find('a', class_='styles-module-root-QmppR styles-module-root_noVisited-aFA10').get('href')
             data = (flat.find('p', class_='styles-module-root-_KFFt styles-module-size_s-awPvv styles-module-size_s-_P6ZA stylesMarningNormal-module-root-OSCNq stylesMarningNormal-module-paragraph-s-_c6vD styles-module-noAccent-nZxz7').text.strip()).split(' ')
