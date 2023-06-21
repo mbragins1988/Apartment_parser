@@ -39,7 +39,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-В файле run_parser.py в функции def writer в переменно book указать путь, куда сохранить файл.
+В файле run_parser.py в функции "def writer" в переменной "book" указать путь, куда сохранить файл.
 
 Запустить файл run_parser.py
 
